@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import PrimaryButton from '../UI/PrimaryButton';
 import SecondaryButton from '../UI/SecondaryButton';
 
-const HERO_TITLE = '¡Construimos, tus sueños!';
+const HERO_TITLE = '¡Construimos tus sueños!';
 
 export default function HeroSection() {
     const titleTextRef = useRef(null);
