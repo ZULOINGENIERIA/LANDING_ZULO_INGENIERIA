@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-main: #ffffff;
+    --bg-soft: #f7f7f5;
+    --text-main: #111111;
+    --text-dark: #1e1e1e;
+    --brand-gold: #c89b3c;
+    --border-soft: #e7e5e4;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+    scroll-padding-top: 5rem;
+}
+
+html.snap-paused {
+    scroll-snap-type: none;
+}
+
+@media (min-width: 1024px) {
+    html {
+        scroll-snap-type: y proximity;
+    }
+}
+
+body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-size: 19px;
+    line-height: 1.7;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    color: #ffffff;
+    background: var(--brand-gold);
+}
+
+@layer utilities {
+    .container-zulo {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .snap-section {
+        @apply min-h-[100svh] snap-start flex items-center;
+        scroll-snap-stop: normal;
+    }
+}
